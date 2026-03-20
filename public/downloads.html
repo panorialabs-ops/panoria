@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Descargas - Panoria Labs</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="navbar">
+        <a class="brand" href="index.html">Panoria Labs</a>
+        <button class="nav-toggle" aria-label="Abrir menú">☰</button>
+        <ul class="nav-list">
+          <li><a href="index.html">Menu</a></li>
+          <li><a href="softwares.html">Softwares</a></li>
+          <li><a href="downloads.html">Descargas</a></li>
+          <li><a href="support.html">Soporte</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="downloads-hero">
+        <div class="downloads-hero-content">
+          <h1>Descargaras Nuestros Softwares</h1>
+          <p>Obtén nuestras herramientas profesionales y comienza a crear hoy mismo</p>
+        </div>
+      </section>
+
+      <!-- Downloads Cards -->
+      <section class="downloads-section">
+        <div class="downloads-container">
+          
+          <!-- Panoria 3D Card -->
+          <div class="download-card">
+            <div class="card-header">
+              <div class="card-icon"></div>
+              <h2>Panoria 3D</h2>
+            </div>
+            <div class="card-body">
+              <p class="card-subtitle">Gestor profesional para impresoras 3D</p>
+              <div class="features">
+                <div class="feature-item">✓ Gestión de proyectos</div>
+                <div class="feature-item">✓ Control de materiales</div>
+                <div class="feature-item">✓ Análisis de costos</div>
+                <div class="feature-item">✓ Interfaz intuitiva</div>
+                <div class="feature-item">✓ Soporte técnico</div>
+              </div>
+              <div class="version-info">
+                <span class="version-badge">v2.1</span>
+                <span class="file-size">Tamaño: 144.1 MB</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a href="../downloads/Panoria3D_Setup21.exe" class="download-btn" download>
+                <span class="btn-icon">⬇</span> Descargar Ahora
+              </a>
+              <p class="platform-info">Windows 10/11 • 64-bit</p>
+            </div>
+          </div>
+
+          <!-- Coming Soon Card -->
+          <div class="download-card coming-soon">
+            <div class="card-header">
+              <div class="card-icon"></div>
+              <h2>Próximos Lanzamientos</h2>
+            </div>
+            <div class="card-body">
+              <p class="card-subtitle">Nuevas herramientas en desarrollo</p>
+              <div class="coming-features">
+                <div class="coming-item">STL Manager</div>
+                <div class="coming-item">IA Integrada</div>
+        
+              </div>
+            </div>
+            <div class="card-footer">
+              <p class="coming-soon-text">¡Mantente atento para más actualizaciones!</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- System Requirements -->
+      <section class="requirements-section">
+        <div class="requirements-container">
+          <h2>Requisitos del Sistema</h2>
+            <div class="requirement-card">
+              <h3>Almacenamiento</h3>
+              <p>500 MB de espacio libre en disco</p>
+            </div>
+            <div class="requirement-card">
+              <h3>Sistema Operativo</h3>
+              <p>Windows 10 o Windows 11</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Support Section -->
+      <section class="support-download-section">
+        <div class="support-content">
+          <h2>¿Necesitas Ayuda?</h2>
+          <p>Si tienes problemas durante la descarga o instalación, consulta nuestra sección de soporte</p>
+          <a href="support.html" class="support-btn">Ir a Soporte →</a>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span id="year"></span> Panoria Labs</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Panoria3D — Solicitar licencia</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="navbar">
+        <a class="brand" href="index.html">Panoria Labs</a>
+        <button class="nav-toggle" aria-label="Abrir menú">☰</button>
+        <ul class="nav-list">
+          <li><a href="index.html">Menu</a></li>
+          <li><a href="softwares.html">Softwares</a></li>
+          <li><a href="downloads.html">Descargas</a></li>
+          <li><a href="support.html">Soporte</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="section form-section">
+        <h1>Solicitar licencia — Panoria3D</h1>
+        <p class="muted">Formulario de solicitud</p>
+
+        <!-- Formulario: nombre y país obligatorios. Email o WhatsApp al menos uno -->
+        <form id="license-form" class="license-form" novalidate>
+          <label>Nombre *
+            <input id="fld-name" type="text" name="name" placeholder="Tu nombre" required />
+          </label>
+
+          <label>País *
+            <input id="fld-country" type="text" name="country" placeholder="Tu país" required />
+          </label>
+
+          <label>Opción de pago
+            <select id="fld-payment" name="payment">
+              <option value="Transferencia ARGENTINA">Transferencia ARGENTINA</option>
+              <option value="PayPal">PayPal</option>
+              <option value="Criptomonedas">Criptomonedas</option>
+            </select>
+          </label>
+
+          <label>Email
+            <input id="fld-email" type="email" name="email" placeholder="Aqui se enviara tu licencia" />
+          </label>
+
+          <label>WhatsApp
+            <input id="fld-whatsapp" type="text" name="whatsapp" placeholder="Aqui se enviara tu licencia" />
+          </label>
+
+          <label class="checkbox">
+            <input id="fld-legal" type="checkbox" name="legal" /> Al apretar esto acepto que conozco que es ilícito revender la licencia a terceros
+          </label>
+
+          
+          
+
+        <!-- Sección de pagos (contenido exacto solicitado) -->
+        <div class="result-area">
+          <div class="info-box">
+            <h4>Métodos de Pago</h4>
+            <p><strong>Transferencia</strong></p>
+            <p>Alias: pano3d<br/>CVU: 0000003100057565027814<br/>Nombre: Juan</p>
+            <p><strong>PayPal</strong></p>
+            <p>https://www.paypal.me/Pano3D</p>
+            <p><strong>Criptomonedas</strong></p>
+            <p><strong>Bitcoin:</strong> 1FLwUeS4VfSfYQPGXoSr7ZjdBLmuC27mEy</p>
+            <p><strong>Ethereum:</strong> 0x083e48b3B9d3A0c249249b59B14Bcd94EeF22563</p>
+          </div>
+
+          <div class="info-box">
+            <h4>Precios</h4>
+            <p><strong>Transferencia (PESO ARGENTINO)</strong><br/>12000 ARS</p>
+            <p><strong>PayPal</strong><br/>15 USD</p>
+            <p><strong>Criptomonedas</strong><br/>15 USD</p>
+          </div>
+        </div>
+
+        <p class="center-note">Una vez que haga el pago complete el formulario y aprete el boton de abajo para enviarle la licencia</p>
+        <div id="form-error" class="form-error" role="alert" aria-live="assertive" hidden></div>
+
+        <!-- Botón de envío ubicado debajo del párrafo principal, fuera del área de pagos -->
+        <div class="form-actions" style="text-align:center;margin-top:1rem">
+          <button id="submit-paid" type="button", class="btn-primary">Ya pague / Enviar formulario</button>
+        </div>
+
+        <!-- Área para modal / pantalla de confirmación -->
+        <!-- Inicia oculta mediante la clase `hidden`. La clase `popup-overlay` y `popup-box`
+             aportan la animación fade+scale sin romper el diseño actual. -->
+        <div id="confirm-overlay" class="confirm-overlay popup-overlay hidden">
+          <div class="confirm-card popup-box">
+            <button id="confirm-close" class="confirm-close" aria-label="Cerrar">✕</button>
+            <div class="confirm-content">
+              <svg class="clock-icon" width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M12 7v6l4 2" stroke="#ff8c42" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="12" cy="12" r="9" stroke="#ff8c42" stroke-width="1.6"/>
+              </svg>
+              <div class="confirm-text">
+                <h2>Su pago esta siendo procesado por nuestro personal...</h2>
+                <p class="confirm-sub">Una vez se verifique el pago se le enviara la licencia a WhatsApp o al Correo proporcionado</p>
+                <!-- Ticket mostrado solo tras envío exitoso -->
+                <div class="ticket-box" aria-hidden="true">
+                  Tu ticket: <span id="ticketNumber"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Envío: pequeño registro visual (toast) para éxito/error -->
+        <div id="send-status" class="send-status" aria-live="polite" hidden></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span id="year"></span> Panoria Labs</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

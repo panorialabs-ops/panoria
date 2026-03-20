@@ -1,0 +1,75 @@
+<!--
+  Panoria Labs - página demo
+  index.html - estructura principal
+-->
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Panoria Labs</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="navbar">
+        <a class="brand" href="#">Panoria Labs</a>
+        <button class="nav-toggle" aria-label="Abrir menú">☰</button>
+        <ul class="nav-list">
+          <li><a href="#home">Menu</a></li>
+          <li><a href="#download">Descargar</a></li>
+          <li><a href="#support">Soporte</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section id="home" class="hero">
+        <div class="hero-inner">
+          <h1 class="title">Panoria Labs</h1>
+          <p class="subtitle">Software tools for digital creators</p>
+
+          <!-- FAQ Bubbles -->
+          <div class="faq-container" aria-live="polite">
+            <!-- Use this markup to add new questions easily -->
+            <div class="faq-item">
+              <div class="faq-question">¿Qué es Pano3D?</div>
+              <div class="faq-answer">Pano3D es un software diseñado para ayudar a personas que venden impresiones 3D a gestionar sus costos, ventas y ganancias de forma sencilla.</div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">¿Para quién está hecho?</div>
+              <div class="faq-answer">Para personas que tienen impresoras 3D y venden productos impresos.</div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">¿Es fácil de usar?</div>
+              <div class="faq-answer">Sí, el software está diseñado para ser simple e intuitivo.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Descargar -->
+      <section id="download" class="section">
+        <h2>Descargar</h2>
+        <p>Pano3D - Gestor de ventas para impresión 3D</p>
+        <a class="btn-download" href="downloads/Panoria3D_Setup21.exe" download>Descargar</a>
+      </section>
+
+    
+      <!-- Soporte -->
+      <section id="support" class="section">
+        <h2>Soporte</h2>
+        <p>Si tienes dudas o problemas con el software puedes contactarnos para recibir ayuda.</p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span id="year"></span> Panoria Labs</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
